@@ -29,11 +29,19 @@ class ConfessionsController < ApplicationController
     @confession = Confession.find(params[:id])
     @comments = @confession.comments
     @comment = Comment.new(params[:confession])
-    if session[:id].blank?
+    
+    if session[:uuid].blank?
       @session = Session.create
-      session[:id] = @session
+      @session.last_seen_at =  Time.new
+      @session.save
+      session[:uuid] = @session.id
+    else
+      @session = Session.find_by_id(session[:uuid])
+      @session.last_seen_at = Time.new
       @session.save
     end
+    
+    @session_count = Session.find(:all, conditions: ['last_seen_at > ?', 5.minutes.ago]).count
     
     @sessions = Session.count
   end
