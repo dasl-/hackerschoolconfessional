@@ -1,0 +1,19 @@
+<div class="row">
+  <div id="confession">
+    <%= @confession.content %>
+  </div>
+  <div id="below-confession">
+    <aside id="comment">
+      <section>
+        <%= render "comment_form", confession: @confession %>
+      </section>
+    </aside>
+
+    <div id="comments">
+      <h3>Reactions (<%= @confession.comments.count %>)</h3>
+      <ol class="comments">
+        <%= render @comments %>
+      </ol>
+    </div>
+  </div>
+</div>

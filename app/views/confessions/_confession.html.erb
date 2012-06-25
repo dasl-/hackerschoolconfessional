@@ -1,0 +1,14 @@
+<div class="confession">
+  <%= confession.content %>
+  <div class="confession-details">
+    <span class="confession-link">
+      <%= link_to(confession) do %>
+        <i class="icon-comment"></i> <%= pluralize(confession.comments.count, 'reaction') %>
+      <% end %>
+    </span>
+    <span class="timestamp">
+      <i class="icon-time"></i> <%= confession.created_at.in_time_zone("Eastern Time (US & Canada)").to_formatted_s(:long_ordinal) %>
+    </span>
+    <div style="clear:both;"></div>
+  </div>
+</div>

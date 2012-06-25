@@ -1,0 +1,14 @@
+<div id="below-title">
+  <aside id="confession">
+    <section>
+      <%= render "confession_form" %>
+    </section>
+  </aside>
+
+  <div id="confessions">
+    <h3>Latest Secrets &amp;<br>Reactions</h3>
+    <%= render @confessions %>
+  </div>
+  <div style="clear:both;"></div>
+  <%= will_paginate %>
+</div>

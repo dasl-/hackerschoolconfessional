@@ -5,10 +5,27 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
+  <div id="wrapper" class="center">
+    <h1>
+      <%= link_to(confessions_path) do %>
+        $ the hacker school confessional<span class="blink cursor">&nbsp;</span>
+      <% end %>
+    </h1>
+
 <%= yield %>
+
+  </div>
+
+  <script type="text/javascript" language="javascript">
+    $(document).ready(function()
+    {
+      $('.blink').blink(); // default is 500ms blink interval.
+    });
+  </script>
 
 </body>
 </html>

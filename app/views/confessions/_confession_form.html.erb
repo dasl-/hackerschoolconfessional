@@ -1,0 +1,8 @@
+<%= form_for(@confession) do |f| %>
+  <%= render "shared/error_messages", object: f.object %>
+  <div class="field">
+    <h3>Anonymous Confession</h3>
+    <%= f.text_area :content, placeholder: "Type a confession here..." %>
+  </div>
+  <%= f.submit "Enter the Booth", class: "btn btn-large btn-primary" %>
+<% end %> 
