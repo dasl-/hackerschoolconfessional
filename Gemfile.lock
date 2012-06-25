@@ -102,6 +102,7 @@ GEM
     uglifier (1.2.3)
       execjs (>= 0.3.0)
       multi_json (>= 1.0.2)
+    uuidtools (2.1.2)
     will_paginate (3.0.3)
 
 PLATFORMS
@@ -117,4 +118,5 @@ DEPENDENCIES
   sass-rails (= 3.2.4)
   sqlite3 (= 1.3.5)
   uglifier (= 1.2.3)
+  uuidtools
   will_paginate (= 3.0.3)

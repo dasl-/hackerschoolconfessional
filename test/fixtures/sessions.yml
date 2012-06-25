@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  uuid: 1
+  last_seen_at: 2012-06-25 16:38:39
+
+two:
+  uuid: 1
+  last_seen_at: 2012-06-25 16:38:39

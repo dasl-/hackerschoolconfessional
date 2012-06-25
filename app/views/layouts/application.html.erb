@@ -11,6 +11,9 @@
 <body>
 
   <div id="wrapper" class="center">
+    <div id="counter">
+      <%= (@session_count + 2).to_s + " users online" %>
+    </div>
     <h1>
       <%= link_to(confessions_path) do %>
         $ the hacker school confessional<span class="blink cursor">&nbsp;</span>
