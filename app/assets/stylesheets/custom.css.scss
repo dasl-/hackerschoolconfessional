@@ -221,3 +221,11 @@ div.pagination
   margin-right:auto;
   width:400px;
 }
+
+.myButton{
+  border: 3px gray solid;
+  background-color:black;
+}
+.myButton:hover{
+  border-color:lightgreen;
+}
