@@ -3,8 +3,8 @@ Confessional::Application.routes.draw do
   resources :confessions, only: [:create, :show, :index]
 
   resources :confessions do
-  	resources :comments
-  end
+    resources :comments
+   end
 
   root :to => 'confessions#index'
 end
