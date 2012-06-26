@@ -151,7 +151,8 @@ div#confessions
 
 div#wrapper
 {
-  padding:60px;
+  padding-top:30px;
+  padding-bottom:60px;
   margin-bottom:30px;
   background-color:black;
   width:800px;
@@ -230,7 +231,10 @@ div.pagination
   border-color:lightgreen;
 }
 
-div #counter{
+div#counter{
   text-align: right;
   color: cyan;
+  margin-right:30px;
+  margin-top:20px;
+
 }

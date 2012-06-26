@@ -9,11 +9,10 @@
   <link rel="shortcut icon" href="favicon.ico"/>
 </head>
 <body>
-
+  <div id="counter">
+    <%= (@session_count + 2).to_s + " sinners in the booth" %>
+  </div>
   <div id="wrapper" class="center">
-    <div id="counter">
-      <%= (@session_count + 2).to_s + " sinners in the booth" %>
-    </div>
     <h1>
       <%= link_to(confessions_path) do %>
         $ the hacker school confessional<span class="blink cursor">&nbsp;</span>
