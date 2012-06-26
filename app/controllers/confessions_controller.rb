@@ -10,8 +10,6 @@ class ConfessionsController < ApplicationController
       @session.save
       session[:uuid] = @session.id
     else
-      @deleteMe = Confession.find_by_id(48)
-      @deleteMe.destroy
       @session = Session.find_by_id(session[:uuid])
       @session.last_seen_at = Time.new
       @session.save
