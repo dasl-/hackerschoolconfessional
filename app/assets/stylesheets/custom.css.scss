@@ -174,9 +174,10 @@ input:focus
 {
   border-color:rgba(144,238,144,.8);
 }
-.comment-content
+span.comment-content
 {
   color:lightgray;
+  white-space: pre-wrap;
 }
 
 div#below-title
@@ -192,6 +193,10 @@ div.confession{
   border-width:5px;
   border-style:solid;
   margin:10px 0;
+}
+span.confession-content, span#confession-content
+{
+  white-space: pre-wrap;
 }
 div.confession-details{
   margin-top:10px;

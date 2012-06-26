@@ -1,8 +1,6 @@
 <li>
-  <div class="comment-content" id="<%= comment.id %>">
-  	<span class="terminal-chars">>>&nbsp;</span>
-  	<%= comment.content %>
-  </div>
+	<span class="terminal-chars">>>&nbsp;</span>
+  <span class="comment-content" id="<%= comment.id %>"><%= comment.content %></span>
   <div class="comment-details">
 	  <span class="timestamp">
 	    <i class="icon-time"></i> <%= comment.created_at.in_time_zone("Eastern Time (US & Canada)").to_formatted_s(:long_ordinal) %>
