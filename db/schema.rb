@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(:version => 20120625203839) do
   end
 
   create_table "sessions", :force => true do |t|
-    t.integer  "uuid"
+    t.string   "uuid"
     t.datetime "last_seen_at"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
