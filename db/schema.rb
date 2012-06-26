@@ -11,26 +11,26 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120625203839) do
+ActiveRecord::Schema.define(:version => 20120626163232) do
 
   create_table "comments", :force => true do |t|
-    t.string   "content"
+    t.text     "content",       :limit => 2000
     t.integer  "confession_id"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
   end
 
   create_table "confessions", :force => true do |t|
-    t.string   "content"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.text     "content",    :limit => 2000
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
   end
 
   create_table "sessions", :force => true do |t|
-    t.string   "uuid"
-    t.datetime "last_seen_at"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.string    "uuid"
+    t.timestamp "last_seen_at"
+    t.timestamp "created_at",   :null => false
+    t.timestamp "updated_at",   :null => false
   end
 
 end
