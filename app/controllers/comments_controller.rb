@@ -40,7 +40,7 @@ class CommentsController < ApplicationController
     if @comment.save
       flash[:success] = "Confession commiserated!"
       @confession.update_attributes(updated_at: Time.now)
-      redirect_to "/confessions/#{@confession.id}/##{@comment.id}"
+      redirect_to "/confessions/#{@confession.id}/##{@confession.comments.count}"
     else
       redirect_to "/confessions/#{@confession.id}/"
     end
