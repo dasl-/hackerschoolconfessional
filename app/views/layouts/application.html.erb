@@ -7,6 +7,7 @@
   <%= csrf_meta_tags %>
   <link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
   <link rel="shortcut icon" href="favicon.ico"/>
+  <script src="http://js.pusher.com/1.12/pusher.min.js"></script>
 </head>
 <body>
   <div id="counter">
@@ -29,6 +30,12 @@
       $('.blink').blink(); // default is 500ms blink interval.
     });
   </script>
-
+  <script type="text/javascript">
+    var pusher = new Pusher('3959abe8b63fee2973a9'); // Replace with your app key
+    var channel = pusher.subscribe('my-channel');
+    channel.bind('my-event', function(data) {
+      alert('An event was triggered with message: ' + data.message);
+    });
+  </script>
 </body>
 </html>

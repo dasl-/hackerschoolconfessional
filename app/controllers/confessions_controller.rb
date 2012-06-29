@@ -4,18 +4,20 @@ class ConfessionsController < ApplicationController
   # GET /confessions
   # GET /confessions.json
   def index
-    @confessions = Confession.paginate(page: params[:page], per_page: 10, order: "updated_at DESC")
-    @confession = Confession.new(params[:confession])
+    redirect_to "http://www.wikihow.com/Be-a-Good-Person"
+    # @confessions = Confession.paginate(page: params[:page], per_page: 10, order: "updated_at DESC")
+    # @confession = Confession.new(params[:confession])
     
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @confessions }
-    end
+    # respond_to do |format|
+    #   format.html # index.html.erb
+    #   format.json { render json: @confessions }
+    # end
   end
 
   # GET /confessions/1
   # GET /confessions/1.json
   def show
+    redirect_to "http://www.wikihow.com/Be-a-Good-Person"
     @confession = Confession.find(params[:id])
     @comments = @confession.comments
     @comment = Comment.new(params[:confession])
@@ -24,6 +26,7 @@ class ConfessionsController < ApplicationController
   # POST /confessions
   # POST /confessions.json
   def create
+    Pusher['my-channel'].trigger('my-event', {:message => 'hello world'})
     @confession = Confession.new(params[:confession])
     @confessions = Confession.paginate(page: params[:page], per_page: 10, order: "created_at DESC")
     
