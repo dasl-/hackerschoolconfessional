@@ -4,20 +4,18 @@ class ConfessionsController < ApplicationController
   # GET /confessions
   # GET /confessions.json
   def index
-    redirect_to "http://www.goodpersontest.com/"
-    # @confessions = Confession.paginate(page: params[:page], per_page: 10, order: "updated_at DESC")
-    # @confession = Confession.new(params[:confession])
+    @confessions = Confession.paginate(page: params[:page], per_page: 10, order: "updated_at DESC")
+    @confession = Confession.new(params[:confession])
     
-    # respond_to do |format|
-    #   format.html # index.html.erb
-    #   format.json { render json: @confessions }
-    # end
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @confessions }
+    end
   end
 
   # GET /confessions/1
   # GET /confessions/1.json
   def show
-    redirect_to "http://www.goodpersontest.com/"
     @confession = Confession.find(params[:id])
     @comments = @confession.comments
     @comment = Comment.new(params[:confession])
@@ -26,12 +24,13 @@ class ConfessionsController < ApplicationController
   # POST /confessions
   # POST /confessions.json
   def create
-    Pusher['my-channel'].trigger('my-event', {:message => 'hello world'})
     @confession = Confession.new(params[:confession])
     @confessions = Confession.paginate(page: params[:page], per_page: 10, order: "created_at DESC")
     
     if @confession.save
       flash[:success] = "Confession commiserated!"
+      Pusher['confession-channel'].trigger('new-confession-event', 
+        {:confession => render_to_string(@confession)})
       redirect_to root_path
     else
       render "index"
