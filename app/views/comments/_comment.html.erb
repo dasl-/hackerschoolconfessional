@@ -1,12 +1,12 @@
 <li>
 	<span class="terminal-chars">&gt;&gt;&nbsp;</span>
   <span class="comment-content" id="<%= comment.id %>"></span>
-  <span class="comment-content" id="<%= comment_counter + 1 %>"><%= add_comment_number_links(h(comment.content)) %></span>
+  <span class="comment-content" id="<%= (defined? comment_counter).nil? ? count : comment_counter + 1 %>"><%= add_comment_number_links(h(comment.content)) %></span>
   <div class="comment-details">
 	  <span class="timestamp">
 	    <i class="icon-time"></i> <%= comment.created_at.in_time_zone("Eastern Time (US & Canada)").to_formatted_s(:long_ordinal) %>
 	  </span>
-    <span class="comment-number">#<%= comment_counter + 1 %></span>
+    <span class="comment-number">#<%= (defined? comment_counter).nil? ? count : comment_counter + 1 %></span>
   </div>
   <div style="clear:both;"></div>
 </li>

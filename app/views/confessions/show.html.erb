@@ -10,10 +10,23 @@
     </aside>
 
     <div id="comments">
-      <h3>Reactions (<%= @confession.comments.count %>)</h3>
+      <h3 id="reactions-heading">Reactions (<%= @confession.comments.count %>)</h3>
       <ol class="comments">
-        <%= render @comments%>
+        <li style="display:none;"></li>
+        <%= render @comments %>
       </ol>
     </div>
   </div>
 </div>
+
+<script type="text/javascript">
+  var pusher = new Pusher('3959abe8b63fee2973a9');
+  var channel = pusher.subscribe('confession-channel');
+  channel.bind('new-comment-event', function(data) {
+    if (data.confession_id == <%= @confession.id %>)
+    {
+      $(data.comment).css('display','none').addClass('new-push').insertAfter('ol.comments li:last').slideDown();
+      $('h3#reactions-heading').replaceWith(data.comment_count);
+    }
+  });
+</script>
