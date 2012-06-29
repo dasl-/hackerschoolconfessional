@@ -4,7 +4,7 @@ class ConfessionsController < ApplicationController
   # GET /confessions
   # GET /confessions.json
   def index
-    redirect_to "http://www.wikihow.com/Be-a-Good-Person"
+    redirect_to "http://www.goodpersontest.com/"
     # @confessions = Confession.paginate(page: params[:page], per_page: 10, order: "updated_at DESC")
     # @confession = Confession.new(params[:confession])
     
@@ -17,7 +17,7 @@ class ConfessionsController < ApplicationController
   # GET /confessions/1
   # GET /confessions/1.json
   def show
-    redirect_to "http://www.wikihow.com/Be-a-Good-Person"
+    redirect_to "http://www.goodpersontest.com/"
     @confession = Confession.find(params[:id])
     @comments = @confession.comments
     @comment = Comment.new(params[:confession])
