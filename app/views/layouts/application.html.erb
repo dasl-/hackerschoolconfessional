@@ -11,7 +11,7 @@
 </head>
 <body>
   <div id="counter">
-    <%= (@session_count + 2).to_s + " sinners in the booth" %>
+    <%= pluralize(@session_count, 'sinner') + " in the booth" %>
   </div>
   <div id="wrapper" class="center">
     <h1>
