@@ -19,10 +19,9 @@
       window.console.log(message);
     }
   };
-  var pusher = new Pusher('3959abe8b63fee2973a9');
+  var pusher = new Pusher(<%= render_pusher_key %>);
   var channel = pusher.subscribe('confession-channel');
   channel.bind('new-confession-event', function(data) {
-    //$(data.confession).css('display','none').addClass('new-push').insertBefore('#confessions div:first').slideDown();
-    alert('hello');
+    $(data.confession).css('display','none').addClass('new-push').insertBefore('#confessions div:first').slideDown();
   });
 </script>

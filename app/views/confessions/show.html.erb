@@ -20,7 +20,7 @@
 </div>
 
 <script type="text/javascript">
-  var pusher = new Pusher('3959abe8b63fee2973a9');
+  var pusher = new Pusher(<%= render_pusher_key =>);
   var channel = pusher.subscribe('confession-channel');
   channel.bind('new-comment-event', function(data) {
     if (data.confession_id == <%= @confession.id %>)
