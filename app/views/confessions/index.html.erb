@@ -14,11 +14,6 @@
 </div>
 
 <script type="text/javascript">
-  Pusher.log = function(message) {
-    if (window.console && window.console.log) {
-      window.console.log(message);
-    }
-  };
   var pusher = new Pusher(<%= render_pusher_key %>);
   var channel = pusher.subscribe('confession-channel');
   channel.bind('new-confession-event', function(data) {
