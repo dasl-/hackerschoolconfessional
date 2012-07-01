@@ -4,7 +4,7 @@ gem 'rails', '3.2.6'
 gem 'bootstrap-sass', '2.0.0'
 gem 'will_paginate', '3.0.3'
 gem 'bootstrap-will_paginate', '0.0.6'
-gem 'pusher'
+#gem 'pusher'
 
 gem 'uuidtools'
 
