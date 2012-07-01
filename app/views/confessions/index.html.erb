@@ -17,6 +17,7 @@
   var pusher = new Pusher('3959abe8b63fee2973a9');
   var channel = pusher.subscribe('confession-channel');
   channel.bind('new-confession-event', function(data) {
-    $(data.confession).css('display','none').addClass('new-push').insertBefore('#confessions div:first').slideDown();
+    //$(data.confession).css('display','none').addClass('new-push').insertBefore('#confessions div:first').slideDown();
+    alert('hello');
   });
 </script>
