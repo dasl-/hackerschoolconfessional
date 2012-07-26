@@ -1,3 +1,5 @@
+Note to self: if the production db ever needs to be replaced with the local db, you must first switch to ruby 1.9.2, since this is the version that heroku uses. Using 1.9.3 will result in errors. So, type the command "rvm use ruby-1.9.2-p290@heroku-db-push-gemset", then run "heroku db:push". Then delete all local cookies and the site should have the db replaced! Lastly, switch back to your previous gemset.
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create
