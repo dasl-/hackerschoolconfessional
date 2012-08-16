@@ -6,12 +6,12 @@ While it was up, the Hacker School Confessional received approximately 50 unique
 
 ![Hacker School Confessional screenshot](http://i.imgur.com/e6OBE.gif "gone forever")
 
-## Features {#features}
+## Features <a id="features"></a>
 * An active users counter (see "X sinners in the booth in the top right corner")
 * Pagination [Figure 1](#pagination).
 * Link to comment numbers by typing e.g. "#2" in the body of your reply. ![link to comments](http://i.imgur.com/sceMm.png "so fancy.")
 
-#### Figure 1 {#pagination}
+#### Figure 1 <a id="pagination"></a>
 ![pagination](http://i.imgur.com/Pzi0z.png "7 pages wow!")
 [Back to Features](#features)
 
