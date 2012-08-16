@@ -6,6 +6,9 @@ While it was up, the Hacker School Confessional received approximately 50 unique
 ![Hacker School Confessional screenshot](http://i.imgur.com/e6OBE.gif "gone forever")
 
 ## Features
+* An active users counter (see "X sinners in the booth in the top right corner")
+* Pagination ![pagination](http://i.imgur.com/Pzi0z.png "7 pages wow!")
+* Link to comment numbers by typing e.g. "#2" in the body of your reply. ![link to comments](http://i.imgur.com/sceMm.png "so fancy.")
 
 
 Note to self: if the production db ever needs to be replaced with the local db, you must first switch to ruby 1.9.2, since this is the version that heroku uses. Using 1.9.3 will result in errors. So, type the command "rvm use ruby-1.9.2-p290@heroku-db-push-gemset", then run "heroku db:push". Then delete all local cookies and the site should have the db replaced! Lastly, switch back to your previous gemset.
