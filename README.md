@@ -11,7 +11,8 @@ While it was up, the Hacker School Confessional received approximately 50 unique
 * Pagination [Figure 1](#pagination).
 * Link to comment numbers by typing e.g. "#2" in the body of your reply. ![link to comments](http://i.imgur.com/sceMm.png "so fancy.")
 
-#### Figure 1 <a id="pagination"></a>
+#### Figure 1 
+<a href="asd" id="pagination">asd</a>
 ![pagination](http://i.imgur.com/Pzi0z.png "7 pages wow!")
 [Back to Features](#features)
 
