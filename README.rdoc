@@ -3,7 +3,6 @@ An anonymous confessional booth for hacker schoolers to sound off and communicat
 
 While it was up, the Hacker School Confessional received approximately 50 unique visitors per day (i.e. virtually all of Hacker School), with an average of 9.83 page views per visit and an average visit duration of 7:39.
 
-http://i.imgur.com/yVqvE.gif
 
 ## Features
 
