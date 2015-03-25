@@ -1,4 +1,10 @@
 Confessional::Application.configure do
+
+  require 'pusher'
+
+  Pusher.app_id = '112785'
+  Pusher.key = 'c2c3fbab7bc6f31e77e7'
+  Pusher.secret = 'fb9026ac4a28ac41ce1c'
   # Settings specified here will take precedence over those in config/application.rb
 
   # Code is not reloaded between requests
