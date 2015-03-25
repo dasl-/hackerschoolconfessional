@@ -22,7 +22,7 @@ group :assets do
   gem 'uglifier', '1.2.3'
 end
 
-gem 'jquery-rails', '2.0.0'
+gem 'jquery-rails', '2.0.3'
 
 group :production do
   gem 'pg', '0.12.2'
