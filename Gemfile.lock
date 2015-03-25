@@ -91,7 +91,7 @@ GEM
     rake (10.4.2)
     rdoc (3.12.2)
       json (~> 1.4)
-    sass (3.4.13)
+    sass (3.2.13)
     sass-rails (3.2.4)
       railties (~> 3.2.0)
       sass (>= 3.1.10)
@@ -127,6 +127,7 @@ DEPENDENCIES
   pusher
   rails (= 3.2.18)
   rails_12factor
+  sass (= 3.2.13)
   sass-rails (= 3.2.4)
   sqlite3 (= 1.3.5)
   uglifier (= 1.2.3)
